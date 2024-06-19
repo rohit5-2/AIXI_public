@@ -26,7 +26,7 @@ import albumentations as A
 from albumentations.pytorch import ToTensorV2
 
 
-annotation_file_path = 'path/to/annotations.csv'
+annotation_file_path = 'path/to/annotations.csv' 
 train_data_folder = 'train/example_data/train'
 validation_data_folder = 'train/example_data/validation'
 tensorboard_log_path = 'train/tensorboard_logs/run_1'

@@ -32,7 +32,6 @@ env/
 # Ignore all files in train/tensorboard_logs
 train/tensorboard_logs/*
 
-# But do not ignore the directory itself
 !train/tensorboard_logs/
 
 data/*

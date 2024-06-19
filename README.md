@@ -1,4 +1,4 @@
-# AIXI Grain Detection Repo
+# AIXI Grain Detection
 
 ## Introduction
 
@@ -20,6 +20,13 @@ conda activate aixi_grain_detection
 - A short example of the dataset has been included in `train/example_data` with train and validation sets in order to validate set-up.
 - Annotations file is provided separately; contact the repo owner.
 - `dataset.py` takes annotations in CSV format with the following headers: `filename,xmin,ymin,xmax,ymax,class`.
-- If `AIXI_PUBLIC` is not the root directory, change file paths in `train.py` before running.
+- If `AIXI_PUBLIC` is not the root working directory, change file paths in `train.py` before running.
+
+## Evalution
+
+To evaluate a trained model on a test set, a COCO style prediction file can be produced using `gen_coco_predictions.py`. The outputted file can be used with the fork of [Review Object Detection Metrics](https://github.com/rohit5-2/review_object_detection_metrics_AIXI) to generate various metrics and PR curve data.
+
+
+
 
 
