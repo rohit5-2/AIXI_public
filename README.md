@@ -15,6 +15,7 @@ conda env create -f environment.yml
 conda activate aixi_grain_detection
 ```
 
+
 ## Training
 
 - A short example of the dataset has been included in `train/example_data` with train and validation sets in order to validate set-up.
@@ -22,11 +23,18 @@ conda activate aixi_grain_detection
 - `dataset.py` takes annotations in CSV format with the following headers: `filename,xmin,ymin,xmax,ymax,class`.
 - If `AIXI_PUBLIC` is not the root working directory, change file paths in `train.py` before running.
 
+
 ## Evalution
 
 To evaluate a trained model on a test set, a COCO style prediction file can be produced using `gen_coco_predictions.py`. The outputted file can be used with the fork of [Review Object Detection Metrics](https://github.com/rohit5-2/review_object_detection_metrics_AIXI) to generate various metrics and PR curve data.
 
 
+## Inference
 
+To generate predictions on an experiment take the following steps:
 
+- Collect frames belonging to a particular experiment in a folder with some form of sequential naming convention
+- Use `generate_predictions.py` to generate a CSV of detections
+- (optional) Use `generate_video.py` to generate a visualisation of an experiment
 
+An example set of frames belonging to an experiment has been included. 
