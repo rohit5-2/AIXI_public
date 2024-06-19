@@ -1,4 +1,4 @@
-name: RA_model1
+name: aixi_grain_detection
 channels:
   - pytorch
   - nvidia

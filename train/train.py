@@ -26,16 +26,16 @@ import albumentations as A
 from albumentations.pytorch import ToTensorV2
 
 
-annotation_file_path = "/home/rohit/AIXI/model1_8/1_8_pytorch_annotations_cropped.csv"
-train_data_folder = "train/example_data/train"
-validation_data_folder = "train/example_data/validation"
-tensorboard_log_path = 'train/runs/run_1'
+annotation_file_path = 'path/to/annotations.csv'
+train_data_folder = 'train/example_data/train'
+validation_data_folder = 'train/example_data/validation'
+tensorboard_log_path = 'train/tensorboard_logs/run_1'
 model_save_path = 'train/model_final_epoch.pth'
 checkpoint_dir = 'train/checkpoints/'
 
 
 def get_model_instance_segmentation(num_classes):
-    model = torchvision.models.detection.fasterrcnn_resnet50_fpn(weights="DEFAULT", box_detection_per_img=300)
+    model = torchvision.models.detection.fasterrcnn_resnet50_fpn(weights='DEFAULT', box_detection_per_img=300)
     model.roi_heads.box_nms_thresh = 0.5 # 0.5 is default
     in_features = model.roi_heads.box_predictor.cls_score.in_features
     model.roi_heads.box_predictor = FastRCNNPredictor(in_features, num_classes)
