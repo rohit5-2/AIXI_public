@@ -1,0 +1,9 @@
+Cooling rate,Type,Nucleation Rate
+0.1,stirred,0.343305553
+0.2,stirred,0.554937327
+0.3,stirred,2.204786725
+0.7,stirred,12.45821528
+1,stirred,9.160318428
+0.3,unstirred,1.285092499
+0.7,unstirred,7.515963039
+1.5,unstirred,18.10535166

@@ -38,3 +38,8 @@ To generate predictions on an experiment take the following steps:
 - (optional) Use `generate_video.py` to generate a visualisation of an experiment
 
 An example set of frames belonging to an experiment has been included. 
+
+
+## Tools
+
+A folder of various tools and scripts has been included which may be of use. All file and folder paths have not been changed, all will require minor modification to be of use however this should be relatively self-explanatory.
